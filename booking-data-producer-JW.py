@@ -5,9 +5,10 @@ import requests
 import json
 
 def authHeader():
-    token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNb25pY2EtQnJhZGxleTI3NTAiLCJleHAiOjE2MzgyNTk5MjgsImlhdCI6MTYzODI0MTkyOH0.tIP4yBFTElHjSmFL6V9pRnfgneSMtYfmF9lPxTZZYZAHpTDdX5TR3im06fzyTaDB_DpltrV4-ayUF68zCy9yoQ"
+    token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdXN0aW4tRXZhbnM3ODAwIiwiZXhwIjoxNjM4ODYzNjc1LCJpYXQiOjE2Mzg4NDU2NzV9.sowxnfPU6S9Q6Am7LLAggzuSpdOBzQpPAcqEoooQ32xfoefxfJ1sEgQs-33JRFfh30zkGuGPLTfBY4Ul51MjBw"
     head = {'Authorization': 'Bearer ' + token}
     return head
+
 
 def addBooking():
     faker = Faker()
@@ -55,5 +56,7 @@ def addBooking():
     bookingJSON = bookingJSON.replace("}}", "}]}")
     finalinput = json.loads(bookingJSON)
     response = requests.post("http://localhost:9003/booking", json=finalinput, headers = authHeader())
-for x in range(1):
+    
+
+for x in range(10):
     addBooking()
