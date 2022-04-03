@@ -5,7 +5,7 @@ import requests
 import json
 
 def authHeader():
-    token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdXN0aW4tRXZhbnM3ODAwIiwiZXhwIjoxNjM4ODYzNjc1LCJpYXQiOjE2Mzg4NDU2NzV9.sowxnfPU6S9Q6Am7LLAggzuSpdOBzQpPAcqEoooQ32xfoefxfJ1sEgQs-33JRFfh30zkGuGPLTfBY4Ul51MjBw"
+    token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZXdVc2VyMSIsImV4cCI6MTY0Njc3OTM4MCwiaWF0IjoxNjQ2NzYxMzgwfQ.SSpmKQuP9zk28aJnqlM75ihw9ujqqNJ55daAAnbi6kEBa1v1ryrG8q4fphd9HneXoV_DjNVdZb5jrdMddBH_bQ"
     head = {'Authorization': 'Bearer ' + token}
     return head
 
